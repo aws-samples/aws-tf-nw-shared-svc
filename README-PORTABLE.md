@@ -5,7 +5,7 @@ This solution is a set of Terraform modules to build [Multi-Account and Multi-VP
     - Network Segments for VPC to VPC connectivity.
     - Organization, Organization Units (OUs), or Accounts level sharing of NSS resources.
 - Provision zero or more of the following supported NSS
-    - [Centralized VPC private endpoints](https://docs.aws.amazon.com/whitepapers/latest/building-scalable-secure-multi-vpc-network-infrastructure/centralized-access-to-vpc-private-endpoints.html) for one or more [supported AWS services](./modules/aws/vpc_endpoints/service_codes.md).
+    - [Centralized VPC private endpoints](https://docs.aws.amazon.com/whitepapers/latest/building-scalable-secure-multi-vpc-network-infrastructure/centralized-access-to-vpc-private-endpoints.html) for one or more [supported AWS services](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/modules/aws/vpc_endpoints/service_codes.md).
     - [Centralized hybrid DNS](https://docs.aws.amazon.com/whitepapers/latest/building-scalable-secure-multi-vpc-network-infrastructure/dns.html#hybrid-dns).
 
 <p align="center"><img src="images/aws-tf-nw-shared-svc-nss-vpc.png" width="95%"/></p>
@@ -30,7 +30,7 @@ The solution has following features:
     - If shared with a list of OUs then all accounts in those OUs can use NSS.
     - If shared with a list of accounts then only those accounts can use NSS.
 - Create zero or more of the following supported NSS.
-    - Centralized VPC private endpoints for one or more [supported AWS services](./modules/aws/vpc_endpoints/service_codes.md).
+    - Centralized VPC private endpoints for one or more [supported AWS services](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/modules/aws/vpc_endpoints/service_codes.md).
     - Centralized hybrid DNS.
 - Create spoke VPCs in an AWS account, with which sharing is enabled, along with
     - Network segment based VPC to VPC connectivity across the accounts.
@@ -65,10 +65,10 @@ The solution has following features:
     - e.g. `aws ram enable-sharing-with-aws-organization`
 - The [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) (`version = ">= 1.3.9"`) is installed.
 - Terraform backend provider and state locking providers are identified and bootstrapped in the *Tooling* account.
-  - A [bootstrap](./examples/bootstrap) module/example is provided that provisions an Amazon S3 bucket for Terraform state storage and Amazon DynamoDB table for Terraform state locking.
+  - A [bootstrap](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/examples/bootstrap) module/example is provided that provisions an Amazon S3 bucket for Terraform state storage and Amazon DynamoDB table for Terraform state locking.
     - The Amazon S3 bucket name must be globally unique.
 - *Terraformer* IAM role is bootstrapped in each of the target AWS account.
-  - A [bootstrap](./examples/bootstrap) module/example is provided that provisions the *Terraformer* role in target AWS accounts.
+  - A [bootstrap](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/examples/bootstrap) module/example is provided that provisions the *Terraformer* role in target AWS accounts.
 - Uniform resource tagging scheme is identified.
   - The examples use only two tags: `Env` and `Project`
 
@@ -148,8 +148,8 @@ This solution will be enhanced in future to improve currently supported NSS and 
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+See [CONTRIBUTING](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ## License
 
-This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
+This library is licensed under the MIT-0 License. See the [LICENSE](https://github.com/aws-samples/aws-tf-nw-shared-svc/tree/main/LICENSE) file.

@@ -1,0 +1,44 @@
+#pre-commit run -a
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      #- id: check-yaml
+      - id: check-added-large-files
+        args: ['--maxkb=4096']
+      - id: detect-private-key
+  - repo: https://github.com/aws-ia/pre-commit-terraform
+    rev: v1.65.0.pre1
+    hooks:
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
+      - id: terraform_fmt
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_validate
+      # provider with configuration_aliases not supported by terraform_validate
+      #- id: terraform_validate
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_docs
+      - id: terraform_docs
+        args:
+          - "--args=--config=.terraform-docs.yaml"
+          - "--args=--lockfile=false"
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
+      - id: terraform_tflint
+        exclude: examples\/efs\/.*$
+        args:
+          - "--args=--config=__GIT_WORKING_DIR__/.tflint.hcl"
+      - id: terraform_tfsec
+        args:
+          - "--args=--exclude-downloaded-modules"
+          - "--args=--custom-check-dir=__GIT_WORKING_DIR__/.tfsec"
+        files: \.tf$
+        exclude: \.terraform\/.*$
+  - repo: local
+    hooks:
+    - id: terraform-checkov
+      name: terraform-checkov
+      description: Run Checkov on Terraform
+      language: system
+      entry: checkov -d . --quiet
+      pass_filenames: false
+      types: [terraform]
