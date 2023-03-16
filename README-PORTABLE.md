@@ -1,6 +1,6 @@
 # Build Multi-Account and Multi-VPC AWS network infrastructure with Network Shared Services (NSS)
 
-This solution is a set of Terraform modules to build [Multi-Account and Multi-VPC AWS network infrastructure](https://docs.aws.amazon.com/whitepapers/latest/building-scalable-secure-multi-vpc-network-infrastructure/welcome.html). Using these modules you can:
+This solution is a set of [Terraform modules](https://github.com/aws-samples/aws-tf-nw-shared-svc) to build [Multi-Account and Multi-VPC AWS network infrastructure](https://docs.aws.amazon.com/whitepapers/latest/building-scalable-secure-multi-vpc-network-infrastructure/welcome.html). Using these modules you can:
 - Provision Network Shared Services (NSS) VPC in the *Network* account with
     - Network Segments for VPC to VPC connectivity.
     - Organization, Organization Units (OUs), or Accounts level sharing of NSS resources.
