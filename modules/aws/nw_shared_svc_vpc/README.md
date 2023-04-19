@@ -11,13 +11,13 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.57.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.63.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_shared_services_vpc"></a> [shared\_services\_vpc](#module\_shared\_services\_vpc) | aws-ia/vpc/aws | >= 4.0.0 |
+| <a name="module_shared_services_vpc"></a> [shared\_services\_vpc](#module\_shared\_services\_vpc) | aws-ia/vpc/aws | >= 4.2.0 |
 | <a name="module_shared_tgw"></a> [shared\_tgw](#module\_shared\_tgw) | ../transit_gw | n/a |
 
 ## Resources

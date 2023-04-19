@@ -1,6 +1,6 @@
 module "shared_services_vpc" {
   source  = "aws-ia/vpc/aws"
-  version = ">= 4.0.0"
+  version = ">= 4.2.0"
 
   name       = "${var.project}-${var.env_name}"
   cidr_block = var.cidr_block

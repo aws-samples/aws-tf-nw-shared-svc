@@ -1,6 +1,6 @@
 module "connected_vpcs" {
   source  = "aws-ia/vpc/aws"
-  version = ">= 4.0.0"
+  version = ">= 4.2.0"
 
   for_each = { for vpc_specs in local.spoke_vpc_specs : "${vpc_specs.name_prefix}-${vpc_specs.env_name}" => vpc_specs }
 

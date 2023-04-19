@@ -10,8 +10,8 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws.admin"></a> [aws.admin](#provider\_aws.admin) | 4.57.0 |
-| <a name="provider_aws.delegated"></a> [aws.delegated](#provider\_aws.delegated) | 4.57.0 |
+| <a name="provider_aws.admin"></a> [aws.admin](#provider\_aws.admin) | 4.63.0 |
+| <a name="provider_aws.delegated"></a> [aws.delegated](#provider\_aws.delegated) | 4.63.0 |
 
 ## Modules
 

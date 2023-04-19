@@ -11,15 +11,15 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.57.0 |
-| <a name="provider_aws.hub"></a> [aws.hub](#provider\_aws.hub) | 4.57.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.63.0 |
+| <a name="provider_aws.hub"></a> [aws.hub](#provider\_aws.hub) | 4.63.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | 2.2.3 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_connected_vpcs"></a> [connected\_vpcs](#module\_connected\_vpcs) | aws-ia/vpc/aws | >= 4.0.0 |
+| <a name="module_connected_vpcs"></a> [connected\_vpcs](#module\_connected\_vpcs) | aws-ia/vpc/aws | >= 4.2.0 |
 
 ## Resources
 
