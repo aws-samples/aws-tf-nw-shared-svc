@@ -9,8 +9,8 @@ repos:
       - id: check-added-large-files
         args: ['--maxkb=4096']
       - id: detect-private-key
-  - repo: https://github.com/aws-ia/pre-commit-terraform
-    rev: v1.65.0.pre1
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.96.2
     hooks:
       # see https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
       - id: terraform_fmt
@@ -19,9 +19,9 @@ repos:
       #- id: terraform_validate
       # see https://github.com/antonbabenko/pre-commit-terraform#terraform_docs
       - id: terraform_docs
-        args:
-          - "--args=--config=.terraform-docs.yaml"
-          - "--args=--lockfile=false"
+        # args:
+        #   - "--args=--config=.terraform-docs.yaml"
+        #   - "--args=--lockfile=false"
       # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
       - id: terraform_tflint
         exclude: examples\/efs\/.*$

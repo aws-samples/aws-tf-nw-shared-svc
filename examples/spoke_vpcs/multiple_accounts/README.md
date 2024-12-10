@@ -128,6 +128,8 @@ Connect to any of the test EC2 instances via AWS Console or AWS CLI/SSM and exec
 
 | Name | Type |
 |------|------|
+| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.nw_shared_svc](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 

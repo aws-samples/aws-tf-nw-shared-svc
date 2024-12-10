@@ -74,6 +74,7 @@ This example demonstrates provisioning of Network Shared Services (NSS) VPC in t
 
 | Name | Type |
 |------|------|
+| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 

@@ -31,16 +31,21 @@ No modules.
 | [aws_s3_bucket_public_access_block.tfstate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
 | [aws_s3_bucket_server_side_encryption_configuration.tfstate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
 | [aws_s3_bucket_versioning.tfstate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
+| [aws_caller_identity.admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_caller_identity.delegated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_iam_policy.admin_full_access_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy) | data source |
+| [aws_iam_policy_document.delegate_assume_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.tls_only](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_region"></a> [region](#input\_region) | The AWS Region e.g. us-east-1 for the environment | `string` | n/a | yes |
 | <a name="input_delegated_access_only"></a> [delegated\_access\_only](#input\_delegated\_access\_only) | When `delegated_access_only` is true, only delegated access role is created. | `bool` | `false` | no |
 | <a name="input_delegated_access_policy"></a> [delegated\_access\_policy](#input\_delegated\_access\_policy) | Provide (optional) policy for the delegated Terraform role. Otherwise "AdministratorAccess" will be assumed. | `string` | `null` | no |
 | <a name="input_delegated_role_name"></a> [delegated\_role\_name](#input\_delegated\_role\_name) | Provide (optional) name for the delegated Terraform role. Otherwise `Terraformer` will be assumed. | `string` | `"Terraformer"` | no |
 | <a name="input_dynamo_locktable_name"></a> [dynamo\_locktable\_name](#input\_dynamo\_locktable\_name) | Name of the DynamoDB table used for Terraform state locking. If not provided, table will not be created. | `string` | `null` | no |
+| <a name="input_region"></a> [region](#input\_region) | The AWS Region e.g. us-east-1 for the environment | `string` | n/a | yes |
 | <a name="input_s3_statebucket_name"></a> [s3\_statebucket\_name](#input\_s3\_statebucket\_name) | Name of the S3 bucket used for storing Terraform state files. If not provided, bucket will not be created. | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Common and mandatory tags for the resources | `map(string)` | `{}` | no |
 
