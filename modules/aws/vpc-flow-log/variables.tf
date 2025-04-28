@@ -14,7 +14,7 @@ variable "flow_log_specs" {
     For `destination_type` s3, provide an existing s3 bucket name
     For `destination_type` cloud-watch-logs, provide an existing cloudwatch log group
     If not provided, a destination will be created based on the `destination_type`
-  - `encrypted`, optional. Should the flow logs be encrypted. default: `true`
+  - `encrypted`, optional. Should the flow logs be encrypted. default: `false`
     Not applicable, if `destination_name` is provided.
   - `kms_alias`, optional. Provide an existing `kms_alias` to encrypt the flow logs.
     Not applicable, if `encrypted` is false or `destination_name` is provided.

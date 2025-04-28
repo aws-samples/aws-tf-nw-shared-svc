@@ -7,10 +7,17 @@ resource "aws_cloudwatch_log_group" "vpc_flow_log" {
 
   tags = merge(
     {
-      Name = "vpc-flow-logs-${var.vpc_id}"
+      Name = local.cw_log_group
     },
     var.tags
   )
+
+  lifecycle {
+    ignore_changes = [
+      retention_in_days,
+      kms_key_id
+    ]
+  }
 }
 
 data "aws_cloudwatch_log_group" "vpc_flow_log" {

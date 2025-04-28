@@ -32,7 +32,7 @@ locals {
   #S3 destination
   create_s3 = local.enable_flow_log && local.flow_log_destination_type == "s3" && try(
   length(var.flow_log_specs.destination_name), 0) == 0 ? true : false
-  bucket_name = "vpc-flow-logs-${var.vpc_id}-${data.aws_caller_identity.current.account_id}"
+  bucket_name = "vpc-flow-logs-${var.vpc_id}-${local.account_id}"
   log_prefix  = var.vpc_id
 
   #for S3
